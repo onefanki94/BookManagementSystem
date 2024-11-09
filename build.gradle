@@ -1,0 +1,77 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.5'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.ict'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// spring Boot Web Starter
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// JSP 관련 의존성
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'  // JSP 엔진
+	implementation 'javax.servlet:javax.servlet-api:4.0.1'  // 서블릿 API
+
+	// MyBatis Spring Boot Starter
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+
+	// Lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// Development tools
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// MySQL JDBC Driver
+	runtimeOnly 'com.mysql:mysql-connector-j'
+
+	// Test
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// JSP support with Tomcat
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+
+	// Jakarta Servlet API and JSTL
+	implementation 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+	implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:2.0.0'
+	implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:2.0.0'
+	implementation 'javax.servlet:jstl:1.2'
+
+	// Inject
+	implementation 'javax.inject:javax.inject:1'
+
+	// JDBC
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+	// page
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// Jsoup
+	implementation 'org.jsoup:jsoup:1.15.3'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
