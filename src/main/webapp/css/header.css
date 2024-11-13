@@ -1,0 +1,136 @@
+body {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+/* 헤더 스타일 */
+#homeMain_header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: #2a3d66; /* 도서관 웹사이트에 어울리는 색 */
+   padding: 15px 30px;
+}
+
+.logo img {
+   height: 50px; /* 로고 크기 설정 */
+}
+
+.haeaderNav {
+   display: flex;
+   flex-grow: 1;
+   justify-content: center;
+}
+
+.haeaderNav ul {
+   display: flex;
+   list-style: none;
+}
+
+.haeaderNav li {
+   margin: 0 30px; /* 메뉴 항목 간 공백을 30px로 설정 */
+}
+
+.haeaderNav a {
+   text-decoration: none;
+   color: white;
+   font-size: 1.2em;
+   font-weight: 500;
+}
+
+.haeaderNav a:hover {
+   color: #f2a400; /* hover 시 주황색 */
+}
+
+/* 로그인 및 회원가입 영역 */
+.LoginAndRegis {
+   display: flex;
+   align-items: center;
+}
+
+.LoginAndRegis div {
+   margin-left: 20px;
+}
+
+.LoginAndRegis a {
+   text-decoration: none;
+   color: #fff;
+   font-size: 16px;
+   display: flex;
+   align-items: center;
+   padding: 8px 20px;
+   border-radius: 25px;
+   border: 2px solid transparent; /* 투명한 배경 */
+   transition: all 0.3s ease;
+}
+
+/* 로그인/회원가입 아이콘 */
+.LoginAndRegis i {
+   margin-right: 8px; /* 아이콘과 텍스트 사이의 간격 */
+   font-size: 18px;
+}
+
+/* 로그인 버튼 */
+.LoginAndRegis .login {
+   background-color: transparent; /* 배경 투명 */
+   border: 2px solid transparent; /* 테두리 색상 설정 */
+   color: #fff; /* 텍스트 색상 */
+   padding: 8px 20px; /* 버튼 내부 여백 */
+   display: flex;
+   align-items: center;
+   transition: all 0.3s ease; /* hover 효과 */
+}
+
+.LoginAndRegis .login:hover {
+   background-color: #f2a400; /* hover 시 배경 색 */
+   border-color: #d88c00; /* hover 시 테두리 색 */
+   color: white; /* hover 시 텍스트 색 */
+}
+
+/* 회원가입 버튼 */
+.LoginAndRegis .register {
+   background-color: transparent;
+   border-color: #28a745; /* 회원가입 버튼의 테두리 색상 */
+   padding: 8px 20px; /* 버튼 내부 여백 설정 */
+}
+
+.LoginAndRegis .register:hover {
+   background-color: #28a745;
+   color: white;
+   border-color: #218838;
+}
+
+/* 반응형 디자인 (모바일) */
+@media (max-width: 768px) {
+   #homeMain_header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+   }
+
+   .haeaderNav {
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 10px;
+   }
+
+   .haeaderNav ul {
+      flex-direction: column;
+      width: 100%;
+   }
+
+   .haeaderNav li {
+      margin: 10px 0;
+   }
+
+   .LoginAndRegis {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+   }
+
+   .LoginAndRegis a {
+      padding: 6px 15px;
+   }
+}
