@@ -28,4 +28,10 @@ public class UserController {
     public String Program(){
         return "board/program";
     }
+
+    // 이벤트
+    @GetMapping("/event")
+    public String Event(){
+        return "board/event";
+    }
 }

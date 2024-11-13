@@ -1,0 +1,70 @@
+
+/* 메인 배너 */
+.main-banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.main-banner img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+}
+
+/* 슬라이더 섹션 */
+.slider-section {
+    margin: 20px 0;
+    padding: 0 5%;
+}
+
+.slider-section h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* 책 슬라이더 */
+.book-slider, .notice-slider-container, .event-slider-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.book, .notice, .event {
+    width: 150px;
+    text-align: center;
+}
+
+.book img, .event img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.book p, .notice p, .event p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* 공지사항 슬라이더 */
+.notice-slider {
+    padding: 20px 5%;
+    background-color: #f9f9f9;
+}
+
+/* 이벤트 섹션 */
+.events-slider {
+    padding: 20px 5%;
+    background-color: #f9f9f9;
+}

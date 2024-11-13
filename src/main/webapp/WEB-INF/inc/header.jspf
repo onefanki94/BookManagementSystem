@@ -27,8 +27,7 @@
                 <li><a href="/board/notice">공지사항</a></li>/
                 <li><a href="/board/openspace">열린공간</a></li>/
                 <li><a href="/board/program">프로그램</a></li>/
-                <li><a href="/">이벤트</a></li>/
-                <li><a href="/">FAQ</a></li>
+                <li><a href="/board/event">이벤트</a></li>
               </ul>
             </div>
 

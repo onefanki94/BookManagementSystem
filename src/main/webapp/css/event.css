@@ -1,0 +1,112 @@
+/* 이벤트 컨테이너 스타일 */
+.event-container {
+    text-align: center; /* "이벤트" 제목을 중앙에 배치 */
+    margin: 30px 0; /* 상하 여백 추가 */
+}
+
+.event-container h1 {
+    font-size: 2em; /* 제목 크기 조정 */
+    color: #333; /* 텍스트 색상 */
+    margin-bottom: 15px; /* 제목과 hr 사이의 간격 */
+}
+
+.event-container hr {
+    border: 0; /* 기본 테두리 제거 */
+    border-top: 2px solid #ccc; /* 회색 실선 */
+    width: 80%; /* hr의 너비를 설정 */
+    margin: 20px auto; /* 가운데 정렬하고 위아래 간격 추가 */
+}
+
+/* 전체 탭 목록 스타일 */
+.tab-list {
+    display: flex; /* 탭을 가로로 배치 */
+    justify-content: center; /* 탭을 중앙에 배치 */
+    list-style-type: none; /* 기본 리스트 스타일 제거 */
+    padding: 0;
+    margin: 0;
+}
+
+/* 개별 탭 스타일 */
+.tab {
+    padding: 12px 20px;
+    font-size: 0.5em; /* 탭 글자 크기 */
+    cursor: pointer;
+    color: #333;
+    margin-right: 15px; /* 탭 간 간격 설정 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+/* 활성화된 탭 스타일 */
+.tab.active {
+    color: black; /* 활성화된 탭의 글자 색 */
+    font-weight: bold;
+    background: lightgray;  /* 활성화된 탭의 배경색 (파란색) */
+}
+
+/* 탭 hover 효과 */
+.tab:hover {
+    color: green; /* 호버 시 글자 색 */
+}
+
+/* 마지막 탭에 여백 없애기 */
+.tab:last-child {
+    margin-right: 0;
+}
+
+/* 탭 콘텐츠 영역 */
+.tab-pane {
+    display: none; /* 기본적으로 콘텐츠 숨기기 */
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.tab-pane.active {
+    display: block; /* active 클래스가 있을 때만 콘텐츠 표시 */
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4개의 카드가 가로로 배치 */
+    gap: 20px; /* 카드 간 간격 */
+    padding: 20px;
+}
+
+/* 카드 스타일 */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* 카드 호버 시 살짝 위로 올라가도록 효과 */
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* 작은 화면에서 2x2 형식으로 표시 */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2개의 카드가 가로로 배치 */
+    }
+}
+
+/* 아주 작은 화면에서는 1x1 형식으로 표시 */
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr; /* 카드가 세로로 배치 */
+    }
+}
