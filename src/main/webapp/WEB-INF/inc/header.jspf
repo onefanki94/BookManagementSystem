@@ -24,10 +24,9 @@
                 <li><a href="/">신작도서</a></li>/
                 <li><a href="/">인기도서</a></li>/
                 <li><a href="/book/bookSearch">자료검색</a></li>/
-                <li><a href="/">공지사항</a></li>/
-                <li><a href="/">열린공간</a></li>/
+                <li><a href="/board/notice">공지사항</a></li>/
+                <li><a href="/board/openspace">열린공간</a></li>/
                 <li><a href="/">프로그램</a></li>/
-                <li><a href="/">내도서관</a></li>/
                 <li><a href="/">FAQ</a></li>
               </ul>
             </div>
