@@ -17,7 +17,7 @@
 </div>
 <div class="openspaceSearchBar">
     <div class="openspaceSearch">
-        <input type="text" id="openspaceSearchInput" placeholder="검색할 공지사항을 작성하세요....">
+        <input type="text" id="openspaceSearchInput" placeholder="검색할 게시글을 작성하세요....">
         <button type="button" class="btn-openspace-search" onclick="searchOpenspace()">검색</button>
     </div>
 

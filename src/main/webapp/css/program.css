@@ -1,0 +1,389 @@
+/* 전체 프로그램 페이지 스타일 */
+.program-container {
+    text-align: center; /* "프로그램" 제목을 중앙에 배치 */
+    margin: 30px 0; /* 상하 여백 추가 */
+}
+
+.program-container h1 {
+    font-size: 1.5em; /* 제목 크기 설정 */
+    color: #333; /* 텍스트 색상 */
+    margin-bottom: 10px; /* 제목과 hr 사이의 간격 */
+}
+
+.program-container hr {
+    border: 0; /* 기본 테두리 제거 */
+    border-top: 1px solid lightgray; /* 회색 실선 */
+    width: 80%; /* hr 너비 설정 */
+    margin: 20px auto; /* 가운데 정렬하고 위아래 여백 추가 */
+}
+
+/* 전체 검색 바 스타일 */
+.programSearchBar {
+    display: flex;
+    flex-direction: column; /* 검색바를 세로로 배치 */
+    align-items: center; /* 가운데 정렬 */
+    margin: 40px 0; /* 상하 여백 추가 */
+}
+
+.programSearch {
+    display: flex;
+    align-items: center; /* 아이콘과 텍스트를 세로로 정렬 */
+    gap: 10px; /* 요소 간 간격 */
+    width: 100%;
+    max-width: 1200px; /* 최대 너비 설정 */
+    padding: 10px;
+    border-top: 2px solid gray;
+    border-bottom: 1px solid lightgray;
+}
+
+/* 검색 입력창 스타일 */
+#programSearchInput {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex-grow: 1; /* 입력 필드가 남는 공간을 채우도록 설정 */
+    box-sizing: border-box;
+    opacity: 0.7;
+}
+
+/* 검색 버튼 스타일 */
+.btn-program-search {
+    background-color: #ADD8E6; /* 연한 파란색 */
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-program-search:hover {
+    background-color: #87CEFA; /* hover 시 색상 변경 */
+}
+
+/* 검색결과 스타일 */
+.programSearch_result {
+    margin-top: 20px; /* 입력창과 버튼들 사이에 간격 추가 */
+    font-size: 16px; /* 텍스트 크기 설정 */
+    color: #333; /* 텍스트 색상 */
+    display: flex;
+    align-items: center; /* 아이콘과 텍스트를 세로로 맞춤 */
+    gap: 8px; /* 아이콘과 텍스트 간의 간격 설정 */
+}
+
+/* 아이콘 스타일 */
+.programSearch_result i {
+    color: #1a73e8; /* 아이콘 색상 */
+    font-size: 20px; /* 아이콘 크기 */
+}
+
+/* 프로그램 탭 스타일 */
+.program-tabs {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.tab-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab {
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    background-color: #f1f1f1;
+    color: #333;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 25%; /* 탭이 화면에 고르게 분포하도록 설정 */
+}
+
+.tab:hover {
+    background-color: #ddd; /* 탭 hover 시 색상 변화 */
+}
+
+.tab.active {
+    background-color: #ADD8E6; /* 활성화된 탭 색상 */
+    border-color: #ADD8E6; /* 활성화된 탭의 테두리 색상 */
+    font-weight: bold; /* 활성화된 탭의 글씨 굵게 */
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.tab-pane {
+    display: none; /* 기본적으로 모든 탭 콘텐츠를 숨깁니다 */
+}
+
+.tab-pane.active {
+    display: block; /* 활성화된 탭의 콘텐츠만 표시 */
+}
+
+.calendar-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* 달력 테이블 스타일 */
+#calendar {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* 요일 제목 스타일 */
+#calendar th {
+    background-color: #f4f4f4;
+    padding: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 날짜 셀 스타일 */
+#calendar td {
+    position: relative;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+/* 날짜 숫자 왼쪽 상단에 배치 */
+#calendar td .date-number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* 날짜 셀에 일정 내용 표시 */
+#calendar td .event-list {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* 날짜 셀에 마우스를 올렸을 때 */
+#calendar td:hover {
+    background-color: #f0f0f0;
+}
+
+/* 오늘 날짜 강조 */
+#calendar td.today {
+    background-color: #ffd700;
+    font-weight: bold;
+}
+
+/* 달력 테이블에서 빈 칸에 대한 스타일 */
+#calendar td.empty {
+    background-color: #f9f9f9;
+}
+
+/* 헤더에 이전, 다음 달 버튼 추가 */
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#calendar-header button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+#calendar-header button:hover {
+    background-color: #0056b3;
+}
+
+/* 월 이름 스타일 */
+#calendar-header span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4개의 열 */
+    gap: 20px;
+    padding: 20px;
+}
+
+.program-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;  /* 카드 안쪽 여백 추가 */
+    box-sizing: border-box;  /* padding을 포함한 크기 설정 */
+    height: auto;  /* 카드 높이를 자동으로 조정 */
+    width : 100%;
+    max-width : 1200px;
+}
+
+.program-image img {
+    width: 100%;
+    height: auto;
+}
+
+.program-details {
+    padding: 10px 0;
+}
+
+.program-title {
+    font-size: 1.3em; /* 제목 크기 증가 */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.program-duration, .program-registration, .program-target {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 8px;  /* 항목 간 여백 추가 */
+}
+
+.tab3-list-container {
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 20px;
+    background: #ffffff; /* 배경색 */
+    max-width: 1200px; /* 최대 너비 */
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    overflow-x: auto; /* 테이블이 너무 넓으면 가로 스크롤 가능하게 설정 */
+}
+
+/* 테이블 스타일 */
+.tab3-list {
+    width: 100%; /* 테이블이 부모 컨테이너의 너비를 채우도록 설정 */
+    border-collapse: collapse; /* 테이블 셀 사이의 간격 제거 */
+    table-layout: fixed; /* 테이블 너비 고정 */
+}
+
+/* 테이블 헤더 스타일 */
+.tab3-list thead {
+    background-color: #f8f9fa; /* 테이블 헤더 배경색 */
+}
+
+.tab3-list th,
+.tab3-list td {
+    text-align: center; /* 텍스트 가운데 정렬 */
+    padding: 15px; /* 셀 내부 여백 */
+    vertical-align: middle; /* 세로 가운데 정렬 */
+    border-bottom: 1px solid #dee2e6; /* 셀 간의 하단 테두리 */
+}
+
+/* 짝수 행 배경 색상 변경 */
+.tab3-list tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* 짝수 행의 배경 색상 (회색) */
+}
+
+/* 마우스 오버 시 배경 색상 변경 */
+.tab3-list tbody tr:hover {
+    background-color: #e0e0e0; /* 마우스 오버 시 배경 색상 (연한 회색) */
+}
+
+.education-program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 카드가 가로로 나열되도록 설정 */
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* 각 교육 프로그램 카드 스타일 */
+.education-program-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border : 1px solid lightgray;
+}
+
+/* 카드 호버 효과 */
+.education-program-card:hover {
+    transform: translateY(-10px); /* 위로 띄우는 효과 */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 프로그램 세부 사항 */
+.education-program-details {
+    padding: 15px;
+}
+
+/* 프로그램 제목 스타일 */
+.education-program-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center; /* 제목을 가운데 정렬 */
+}
+
+/* 수강 기간 및 기타 세부 사항 스타일 */
+.education-program-duration,
+.education-program-lectures,
+.education-program-fee,
+.education-program-online,
+.education-program-registration {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    text-align: center; /* 각 항목을 가운데 정렬 */
+}
+
+/* 반응형 스타일 - 모바일 및 작은 화면에서 탭 스타일 조정 */
+@media screen and (max-width: 768px) {
+    .tab-list {
+        flex-direction: column; /* 모바일에서 탭들을 세로로 배치 */
+    }
+
+    .tab {
+        width: 100%; /* 모바일에서는 탭 버튼들이 전체 너비를 차지하도록 설정 */
+        padding: 12px;
+    }
+
+    .programSearch {
+        flex-direction: column; /* 검색바를 세로로 배치 */
+        align-items: stretch; /* 버튼과 입력창을 가로로 늘리기 */
+    }
+
+    #programSearchInput {
+        margin-bottom: 10px; /* 입력창과 버튼 사이에 간격 추가 */
+    }
+
+    .programDiv {
+        flex-direction: column; /* 모바일에서 버튼들을 세로로 배치 */
+        gap: 10px; /* 버튼 간 간격 설정 */
+    }
+
+    .programDiv button {
+        width: 100%; /* 모바일에서는 버튼 너비를 100%로 설정 */
+        padding: 12px; /* 버튼 크기 조정 */
+    }
+}

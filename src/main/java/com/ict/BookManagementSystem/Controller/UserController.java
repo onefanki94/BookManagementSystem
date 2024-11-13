@@ -22,4 +22,10 @@ public class UserController {
     public String Openspace(){
         return "board/openSpace";
     }
+
+    // 프로그램
+    @GetMapping("/program")
+    public String Program(){
+        return "board/program";
+    }
 }
