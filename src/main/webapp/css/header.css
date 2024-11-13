@@ -55,10 +55,6 @@ body {
    align-items: center;
 }
 
-.LoginAndRegis div {
-   margin-left: 20px;
-}
-
 .LoginAndRegis a {
    text-decoration: none;
    color: #fff;
@@ -90,7 +86,7 @@ body {
 .LoginAndRegis .register {
    background-color: transparent;
    border-color: #28a745;
-   padding: 8px 20px;
+   padding: 8px 40px;
 }
 
 .LoginAndRegis .register:hover {
